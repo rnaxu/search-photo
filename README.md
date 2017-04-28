@@ -1,4 +1,4 @@
-# map-gnavi
+# vuex
 
 > A Vue.js project
 
