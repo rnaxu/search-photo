@@ -6,6 +6,7 @@ deployment:
   deploy:
     branch: master
     commands:
+      - npm run build
       - git config --global user.email mayumiii.seki@gmail.com
       - git config --global user.name rnaxu
       - git rm .gitignore
