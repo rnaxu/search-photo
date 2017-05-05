@@ -1,23 +1,33 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+    <head-bar></head-bar>
+    <search-box></search-box>
+    <card v-for="photo in photos" :photo="photo"></card>
+    <!-- <router-view></router-view> -->
   </div>
 </template>
 
 <script>
+import HeadBar from './components/HeadBar'
+import SearchBox from './components/SearchBox'
+import Card from './components/Card'
+import { mapGetters } from 'vuex'
+
 export default {
-  name: 'app'
+  name: 'app',
+  computed: {
+    ...mapGetters(['photos'])
+  },
+  components: {
+    HeadBar,
+    SearchBox,
+    Card
+  }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import './css/_var.css';
+@import './css/_reset.css';
+@import './css/_default.css';
 </style>

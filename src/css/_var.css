@@ -1,0 +1,21 @@
+:root {
+  /* font-size */
+  --font-size-root: 16px;
+  --font-size-base: 1rem;
+  --font-size-l: 2.25rem;
+
+  /* font-family */
+  --font-family-default: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* font-weight */
+  --font-weight-default: 300;
+
+  /* color */
+  --color-dark-primary: #0097a7;
+  --color-primary: #00bcd4;
+  --color-light-primary: #b2ebf2;
+  --color-accent: #ff4081;
+  --color-secandary: #757575;
+  --color-divider: #bdbdbd;
+  --color-primary-text: #212121;
+}

@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+:root {
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-default);
+  font-weight: var(--font-weight-default);
+}
+
+button, input {
+  background: none;
+  border: none;
+}
+
+img {
+  vertical-align: bottom;
+}

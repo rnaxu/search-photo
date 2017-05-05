@@ -1,4 +1,4 @@
-# vuex
+# search-photo
 
 > A Vue.js project
 
