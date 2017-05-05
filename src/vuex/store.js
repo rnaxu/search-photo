@@ -5,7 +5,7 @@ import { CHANGE_KEYWORD, SEARCH } from './mutation-types'
 Vue.use(Vuex)
 
 function getPhotos (query) {
-  return fetch(`https://api.flickr.com/services/rest?method=flickr.photos.search&per_page=10&format=json&nojsoncallback=1&text=${query}&api_key=6708f15f09cc822b9853f79d8161ea02`)
+  return fetch(`https://api.flickr.com/services/rest?method=flickr.photos.search&per_page=18&format=json&nojsoncallback=1&text=${query}&api_key=6708f15f09cc822b9853f79d8161ea02`)
     .then(res => res.json())
 }
 

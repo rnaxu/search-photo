@@ -32,6 +32,8 @@ export default {
     box-sizing: border-box;
     border-bottom: solid 1px var(--color-divider);
     color: var(--color-primary-text);
+    font-size: var(--font-size-base);
+    line-height: 1.5;
     &::-webkit-input-placeholder {
       color: var(--color-divider);
     }
@@ -41,10 +43,10 @@ export default {
     }
   }
   &__submit {
-    width: 34px;
-    height: 34px;
+    width: 45px;
+    height: 45px;
     color: var(--color-dark-primary);
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-md);
     cursor: pointer;
   }
 }
