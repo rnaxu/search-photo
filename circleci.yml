@@ -1,0 +1,15 @@
+machine:
+  node:
+    version: 6.0.0
+
+deployment:
+  deploy:
+    branch: master
+    commands:
+      - git config --global user.email mayumiii.seki@gmail.com
+      - git config --global user.name rnaxu
+      - git rm .gitignore
+      - git add dist
+      - git commit -m "[ci skip] build on circle ci"
+      - git subtree split --branch gh-pages --prefix dist
+      - git push origin gh-pages:gh-pages -f
