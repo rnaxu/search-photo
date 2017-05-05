@@ -1,6 +1,7 @@
 # search-photo
 
-> A Vue.js project
+- Search photos by keyword
+- A Vue.js project
 
 ## Build Setup
 
