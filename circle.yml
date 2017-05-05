@@ -13,6 +13,4 @@ deployment:
       - git add dist
       - git commit -m "[ci skip] build on circle ci"
       - git subtree split --branch gh-pages --prefix dist
-      - git checkout gh-pages
-      - git pull origin gh-pages
-      - git push origin gh-pages
+      - git push origin gh-pages:gh-pages -f
