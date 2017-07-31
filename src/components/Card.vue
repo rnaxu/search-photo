@@ -5,14 +5,22 @@
       <h2 class="card__headline">{{photo.title}}</h2>
       <button class="card__button">
         <!-- <i class="fa fa-heart" aria-hidden="true"></i> -->
-        <i class="fa fa-heart-o" aria-hidden="true"></i>
+        <i @click="UPDATE_FAVORITES(photo)" class="fa fa-heart-o" aria-hidden="true"></i>
       </button>
     </div>
   </section>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+import { UPDATE_FAVORITES } from '../vuex/mutation-types'
+
 export default {
+  methods: {
+    ...mapActions([
+      UPDATE_FAVORITES
+    ])
+  },
   props: {
     photo: Object
   }

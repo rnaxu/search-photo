@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { CHANGE_KEYWORD, SEARCH } from './mutation-types'
+import { CHANGE_KEYWORD, SEARCH, UPDATE_FAVORITES } from './mutation-types'
 
 Vue.use(Vuex)
 
@@ -14,6 +14,7 @@ function createFormatedPhotos (photos) {
 
   photos.forEach((v) => {
     const formatedPhoto = {
+      id: v.id,
       title: v.title,
       url: `https://farm${v.farm}.staticflickr.com/${v.server}/${v.id}_${v.secret}.jpg`
     }
@@ -24,11 +25,34 @@ function createFormatedPhotos (photos) {
   return formatedPhotos
 }
 
-const state = {
-  keyword: '',
-  photos: []
+function changeFavorites (favorites, favorite) {
+  // 重複チェックを後で追加
+
+  favorites.push(favorite)
+
+  return favorites
 }
 
+/*
+ *
+ * State
+ *
+ * 状態
+ *
+ */
+const state = {
+  keyword: '',
+  photos: [],
+  favorites: []
+}
+
+/*
+ *
+ * Actions
+ *
+ * ユーザの操作 / APIとのやりとり
+ *
+ */
 const actions = {
   [CHANGE_KEYWORD] ({ commit }, keyword) {
     commit(CHANGE_KEYWORD, keyword)
@@ -39,19 +63,39 @@ const actions = {
       .then(data => {
         commit(SEARCH, data.photos.photo)
       })
+  },
+
+  [UPDATE_FAVORITES] ({ commit }, favorite) {
+    commit(UPDATE_FAVORITES, favorite)
   }
 }
 
+/*
+ *
+ * Getters
+ *
+ */
 const getters = {
-  photos: state => state.photos
+  photos: state => state.photos,
+  favorite: state => state.favorites
 }
 
+/*
+ *
+ * Mutations
+ *
+ * 状態への変更処理
+ *
+ */
 const mutations = {
   [CHANGE_KEYWORD] (state, keyword) {
     state.keyword = keyword
   },
   [SEARCH] (state, photos) {
     state.photos = createFormatedPhotos(photos)
+  },
+  [UPDATE_FAVORITES] (state, favorite) {
+    state.favorites = changeFavorites(state.favorites, favorite)
   }
 }
 
