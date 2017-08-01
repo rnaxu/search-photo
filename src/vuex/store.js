@@ -4,11 +4,25 @@ import { CHANGE_KEYWORD, SEARCH, UPDATE_FAVORITES } from './mutation-types'
 
 Vue.use(Vuex)
 
+/**
+ * flickrAPIから画像情報を取得
+ *
+ * @param query { String } ユーザが入力したキーワード
+ * @return { Object }
+ *
+ */
 function getPhotos (query) {
   return fetch(`https://api.flickr.com/services/rest?method=flickr.photos.search&per_page=18&format=json&nojsoncallback=1&text=${query}&api_key=6708f15f09cc822b9853f79d8161ea02`)
     .then(res => res.json())
 }
 
+/**
+ * APIから取得した画像情報から必要なものだけを取り出す
+ *
+ * @param photos { Array } APIから取得した画像情報
+ * @return { Array }
+ *
+ */
 function createFormatedPhotos (photos) {
   let formatedPhotos = []
 
@@ -25,7 +39,15 @@ function createFormatedPhotos (photos) {
   return formatedPhotos
 }
 
-function changeFavorites (favorites, favorite) {
+/**
+ * 画像をお気に入りに追加
+ *
+ * @param favorites { Array } お気に入りに入っている画像情報
+ * @param favorite { Object } ユーザが新たにお気に入りした画像情報
+ * @return { Array }
+ *
+ */
+function addFavorites (favorites, favorite) {
   // 重複チェックを後で追加
 
   favorites.push(favorite)
@@ -33,10 +55,10 @@ function changeFavorites (favorites, favorite) {
   return favorites
 }
 
-/*
+
+/**
  *
  * State
- *
  * 状態
  *
  */
@@ -46,10 +68,9 @@ const state = {
   favorites: []
 }
 
-/*
+/**
  *
  * Actions
- *
  * ユーザの操作 / APIとのやりとり
  *
  */
@@ -70,7 +91,7 @@ const actions = {
   }
 }
 
-/*
+/**
  *
  * Getters
  *
@@ -80,10 +101,9 @@ const getters = {
   favorite: state => state.favorites
 }
 
-/*
+/**
  *
  * Mutations
- *
  * 状態への変更処理
  *
  */
@@ -95,7 +115,7 @@ const mutations = {
     state.photos = createFormatedPhotos(photos)
   },
   [UPDATE_FAVORITES] (state, favorite) {
-    state.favorites = changeFavorites(state.favorites, favorite)
+    state.favorites = addFavorites(state.favorites, favorite)
   }
 }
 
