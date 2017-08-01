@@ -55,7 +55,6 @@ function addFavorites (favorites, favorite) {
   return favorites
 }
 
-
 /**
  *
  * State
