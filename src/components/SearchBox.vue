@@ -20,7 +20,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .searchBox {
   margin: 50px;
   display: flex;

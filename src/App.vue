@@ -22,7 +22,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="postcss">
 @import './css/_customProperty.css';
 @import './css/_reset.css';
 @import './css/_default.css';

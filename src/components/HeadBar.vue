@@ -7,7 +7,7 @@
   </header>
 </template>
 
-<style scoped>
+<style lang="postcss" scoped>
 @import '../css/_var.css';
 @import '../css/_mixin.css';
 

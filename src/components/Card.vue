@@ -27,7 +27,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .card {
   margin: 10px;
   position: relative;
