@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <card v-for="photo in photos" :photo="photo"></card>
+    <card v-for="photo in photos" :photo="photo" :key="photo.id"></card>
     <!-- <div :favorite="favorite"></div> -->
   </div>
 </template>
