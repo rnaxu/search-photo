@@ -28,32 +28,7 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.card {
-  margin: 10px;
-  position: relative;
-  width: 250px;
-  height: 250px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
-  &__img {
-    object-fit: cover;
-  }
-  &__bottom {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, .25);
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    box-sizing: border-box;
-  }
-  &__headline {
-    color: #fff;
-    flex: 1;
-  }
-  &__button {
-    color: var(--color-accent);
-    font-size: var(--font-size-base);
-  }
-}
+@import '../css/setting/_var.css';
+@import '../css/setting/_media.css';
+@import '../css/components/_card.css';
 </style>

@@ -1,7 +1,0 @@
-@charset "utf-8";
-
-@define-mixin max-screen $break-point {
-  @media screen and (max-width: $break-point) {
-    @mixin-content;
-  }
-}

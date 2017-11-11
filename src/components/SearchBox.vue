@@ -21,33 +21,7 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.searchBox {
-  margin: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  &__text {
-    width: 300px;
-    padding: 10px;
-    box-sizing: border-box;
-    border-bottom: solid 1px var(--color-divider);
-    color: var(--color-primary-text);
-    font-size: var(--font-size-base);
-    line-height: 1.5;
-    &::-webkit-input-placeholder {
-      color: var(--color-divider);
-    }
-    &:focus {
-      border-bottom: solid 1px var(--color-dark-primary);
-      outline: none;
-    }
-  }
-  &__submit {
-    width: 45px;
-    height: 45px;
-    color: var(--color-dark-primary);
-    font-size: var(--font-size-md);
-    cursor: pointer;
-  }
-}
+@import '../css/setting/_var.css';
+@import '../css/setting/_media.css';
+@import '../css/components/_searchBox.css';
 </style>

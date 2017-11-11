@@ -3,6 +3,7 @@
     <head-bar></head-bar>
     <search-box></search-box>
     <container></container>
+    <foot-bar></foot-bar>
     <!-- <router-view></router-view> -->
   </div>
 </template>
@@ -11,19 +12,22 @@
 import HeadBar from './components/HeadBar'
 import SearchBox from './components/SearchBox'
 import Container from './components/Container'
+import FootBar from './components/FootBar'
 
 export default {
   name: 'app',
   components: {
     HeadBar,
     SearchBox,
-    Container
+    Container,
+    FootBar
   }
 }
 </script>
 
 <style lang="postcss">
-@import './css/_customProperty.css';
-@import './css/_reset.css';
-@import './css/_default.css';
+@import './css/setting/_var.css';
+@import './css/setting/_media.css';
+@import './css/base/_reset.css';
+@import './css/base/_default.css';
 </style>

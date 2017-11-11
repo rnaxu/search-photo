@@ -1,0 +1,16 @@
+@charset 'utf-8';
+
+.container {
+  width: 810px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (--md) {
+    width: 540px;
+  }
+
+  @media (--sm) {
+    width: 270px;
+  }
+}

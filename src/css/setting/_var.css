@@ -1,16 +1,11 @@
 @charset "utf-8";
 
 :root {
-  /* break point */
-  --bp-sm: 375px;
-  --bp-md: 544px;
-
   /* font-size */
   --font-size-root-sm: 12px;
   --font-size-root-lg: 16px;
   --font-size-base: 1rem; /* 16px */
   --font-size-md: 1.25rem; /* 20px */
-  --font-size-lg: 2.25rem; /* 36px */
 
   /* font-family */
   --font-family-default: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;

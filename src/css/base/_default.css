@@ -4,6 +4,10 @@
   font-size: var(--font-size-root-lg);
   font-family: var(--font-family-default);
   font-weight: var(--font-weight-default);
+
+  @media (--sm) {
+    font-size: var(--font-size-root-sm);
+  }
 }
 
 button, input {
@@ -13,10 +17,4 @@ button, input {
 
 img {
   vertical-align: bottom;
-}
-
-@media screen and (max-width: 375px) {
-  :root {
-    font-size: var(--font-size-root-sm);
-  }
 }
