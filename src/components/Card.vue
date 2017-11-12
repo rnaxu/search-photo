@@ -13,7 +13,7 @@
 
 <script>
 import { mapActions } from 'vuex'
-import { UPDATE_FAVORITES } from '../vuex/mutation-types'
+import { UPDATE_FAVORITES } from '../store/mutation-types'
 
 export default {
   methods: {

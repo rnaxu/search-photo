@@ -9,7 +9,7 @@
 
 <script>
 import { mapActions } from 'vuex'
-import { CHANGE_KEYWORD, SEARCH } from '../vuex/mutation-types'
+import { CHANGE_KEYWORD, SEARCH } from '../store/mutation-types'
 
 export default {
   methods: {
