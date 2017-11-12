@@ -1,13 +1,13 @@
 <template>
   <section class="card">
-    <img v-bind:src="photo.url" alt="" width="250" height="250" class="card__img">
-    <div class="card__bottom">
+    <div class="card__layer">
       <h2 class="card__headline">{{photo.title}}</h2>
       <button class="card__button">
         <!-- <i class="fa fa-heart" aria-hidden="true"></i> -->
         <i @click="UPDATE_FAVORITES(photo)" class="fa fa-heart-o" aria-hidden="true"></i>
       </button>
     </div>
+    <img v-bind:src="photo.url" alt="" width="250" height="250" class="card__img">
   </section>
 </template>
 

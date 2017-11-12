@@ -1,16 +1,11 @@
 @charset 'utf-8';
 
 .container {
-  width: 810px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-
-  @media (--md) {
-    width: 540px;
-  }
-
-  @media (--sm) {
-    width: 270px;
-  }
+  display: grid;
+  margin: 0 1rem;
+  grid-auto-rows: 250px;
+  grid-template-columns: repeat(auto-fit, 250px);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  justify-content: center;
 }

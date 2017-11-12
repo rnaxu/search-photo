@@ -1,7 +1,7 @@
 @charset 'utf-8';
 
 .footBar {
-  padding: 1em;
+  margin: 3em 1em;
 
   &__caption {
     text-align: center;
