@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <card v-for="photo in photos" :photo="photo" :key="photo.id"></card>
-    <!-- <div :favorite="favorite"></div> -->
   </div>
 </template>
 
@@ -11,7 +10,7 @@ import Card from './Card'
 
 export default {
   computed: {
-    ...mapGetters(['photos', 'favorites'])
+    ...mapGetters(['photos'])
   },
   components: {
     Card

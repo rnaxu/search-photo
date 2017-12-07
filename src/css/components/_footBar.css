@@ -2,9 +2,10 @@
 
 .footBar {
   margin: 3em 1em;
+  text-align: center;
 
   &__caption {
-    text-align: center;
     color: var(--color-primary-text);
+    font-size: var(--font-size-sm);
   }
 }

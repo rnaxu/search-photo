@@ -4,8 +4,9 @@
   /* font-size */
   --font-size-root-sm: 12px;
   --font-size-root-lg: 16px;
-  --font-size-base: 1rem; /* 16px */
-  --font-size-md: 1.25rem; /* 20px */
+  --font-size-sm: .75rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.25rem;
 
   /* font-family */
   --font-family-default: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;

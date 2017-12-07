@@ -24,11 +24,9 @@
   &__headline {
     color: #fff;
     flex: 1;
-  }
-
-  &__button {
-    color: var(--color-accent);
-    font-size: var(--font-size-base);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 
   &__check {
@@ -38,6 +36,11 @@
   &__label {
     font-size: var(--font-size-base);
     color: #fff;
+    margin-left: 5px;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &__check:checked + &__label {

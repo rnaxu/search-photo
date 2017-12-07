@@ -2,11 +2,7 @@
   <section class="card">
     <div class="card__layer">
       <h2 class="card__headline">{{photo.title}}</h2>
-      <!-- <button class="card__button"> -->
-        <!-- <i class="fa fa-heart" aria-hidden="true"></i> -->
-        <!-- <i @click="UPDATE_FAVORITES(photo)" class="fa fa-heart-o" aria-hidden="true"></i> -->
-      <!-- </button> -->
-      <input @change="UPDATE_FAVORITES(photo)" type="checkbox" :id="photo.id" class="card__check">
+      <input @change="UPDATE_FAVORITES(photo)" type="checkbox" :id="photo.id" :checked="photo.favorite" class="card__check">
       <label :for="photo.id" class="card__label">
         <i class="fa fa-heart" aria-hidden="true"></i>
       </label>

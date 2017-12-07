@@ -1,6 +1,6 @@
 <template>
   <footer class="footBar">
-    <p class="footBar__caption">Powered by Flickr</p>
+    <small class="footBar__caption">&copy; 2017 rnaxu<br>Powered by Flickr</small>
   </footer>
 </template>
 
