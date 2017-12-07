@@ -2,5 +2,5 @@
 
 export default {
   photos: state => state.photos,
-  favorite: state => state.favorites
+  favorites: state => state.favorites
 }

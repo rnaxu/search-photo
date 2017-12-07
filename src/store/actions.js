@@ -1,4 +1,4 @@
-// Actions: ユーザの操作 / APIとのやりとり
+// Actions
 
 import * as types from './mutation-types'
 

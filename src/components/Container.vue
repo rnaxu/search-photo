@@ -11,7 +11,7 @@ import Card from './Card'
 
 export default {
   computed: {
-    ...mapGetters(['photos', 'favorite'])
+    ...mapGetters(['photos', 'favorites'])
   },
   components: {
     Card

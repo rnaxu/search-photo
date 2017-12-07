@@ -30,4 +30,17 @@
     color: var(--color-accent);
     font-size: var(--font-size-base);
   }
+
+  &__check {
+    display: none;
+  }
+
+  &__label {
+    font-size: var(--font-size-base);
+    color: #fff;
+  }
+
+  &__check:checked + &__label {
+    color: var(--color-accent);
+  }
 }

@@ -2,12 +2,16 @@
   <section class="card">
     <div class="card__layer">
       <h2 class="card__headline">{{photo.title}}</h2>
-      <button class="card__button">
+      <!-- <button class="card__button"> -->
         <!-- <i class="fa fa-heart" aria-hidden="true"></i> -->
-        <i @click="UPDATE_FAVORITES(photo)" class="fa fa-heart-o" aria-hidden="true"></i>
-      </button>
+        <!-- <i @click="UPDATE_FAVORITES(photo)" class="fa fa-heart-o" aria-hidden="true"></i> -->
+      <!-- </button> -->
+      <input @change="UPDATE_FAVORITES(photo)" type="checkbox" :id="photo.id" class="card__check">
+      <label :for="photo.id" class="card__label">
+        <i class="fa fa-heart" aria-hidden="true"></i>
+      </label>
     </div>
-    <img v-bind:src="photo.url" alt="" width="250" height="250" class="card__img">
+    <img :src="photo.url" :alt="photo.title" width="250" height="250" class="card__img">
   </section>
 </template>
 

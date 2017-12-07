@@ -5,7 +5,7 @@ import * as types from './mutation-types'
 /**
  * APIから取得した画像情報から必要なものだけを取り出す
  *
- * @param photos { Array } APIから取得した画像情報
+ * @param { Array } photos APIから取得した画像情報
  * @return { Array }
  *
  */
@@ -28,8 +28,8 @@ function createFormatedPhotos (photos) {
 /**
  * 画像をお気に入りに追加
  *
- * @param favorites { Array } お気に入りに入っている画像情報
- * @param favorite { Object } ユーザが新たにお気に入りした画像情報
+ * @param { Array } favorites お気に入りに入っている画像情報
+ * @param { Object } favorite ユーザが新たにお気に入りした画像情報
  * @return { Array }
  *
  */
@@ -37,6 +37,9 @@ function addFavorites (favorites, favorite) {
   // 重複チェックを後で追加
 
   favorites.push(favorite)
+
+  // ローカルストレージに追加
+  localStorage.setItem('favorites', JSON.stringify(favorites))
 
   return favorites
 }
