@@ -1,6 +1,14 @@
 <template>
   <header class="headBar">
     <h1 class="headBar__headline">Search Photo</h1>
+    <nav>
+      <button type="button" class="headBar__button">
+        <span class="headBar__buttonInner"></span>
+      </button>
+      <!-- <ul>
+        <li></li>
+      </ul> -->
+    </nav>
   </header>
 </template>
 
